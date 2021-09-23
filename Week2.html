@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 Portfolio</title>
+    <script>
+    function enterContents(){
+        const input1 = document.getElementById("input1").value;
+        document.getElementById("Contents").innerHTML = input1;
+    }
+    function summation(){
+        const number = document.getElementById("input1").value;
+        if(!isNaN(number)){
+            let sum = 0;
+            for(i=0; i<=number; i++){
+                sum += i;
+            }
+            document.getElementById("Contents").innerHTML = sum;
+        }
+        else{
+            document.getElementById("Contents").innerHTML = "Error, please enter a number";
+        }
+    }
+    function add(){
+        const input1 = document.getElementById("input1").value;
+        const input2 = document.getElementById("input2").value;
+        let sum = 0;
+        if(!isNaN(input1) && !isNaN(input2)){
+            sum = parseInt(input1) + parseInt(input2);
+        }
+        document.getElementById("Contents").innerHTML = sum;
+    }
+    </script>  
+</head>
+  <body>
+    <h1>Week 2 Team Activity</h1>
+    <input id="input1"></input>
+    <input id="input2"></input>
+    <button onClick="add()">+</button>
+    <button onClick="summation()">Summation</button>
+    <div id="Contents"></div>
+  </body>
+</html>
