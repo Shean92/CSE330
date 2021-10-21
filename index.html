@@ -4,11 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WDD 330 Portfolio</title>
-    <script src="js/main.js"></script>  
+    <script>
+      const links = [
+    {
+      label: "Week1 notes",
+      url: "week1/index.html"
+    }
+  ];
+
+  const list = document.getElementById("ListOfLinks");
+  for(i = 0; i < links.length; i++){
+    list.innerHTML += `<li href="${links[i].url}">{links[i].label}</li>`;
+}
+    </script>
 </head>
   <body>
     <h1>WDD 330 Portfolio</h1>
-    <ol id="ListOfLinks" onload="populateList()">
-    </ol>
+    <ol id="ListOfLinks">
+    </ol> 
   </body>
 </html>
