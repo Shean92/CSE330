@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 Portfolio</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+  <body>
+    <h1>Todos</h1>
+    <div>Filter: <span id="filterName"></span></div>
+    <ul id="myUL">
+        <li>Hit the gym</li>
+        <li class="checked">Pay bills</li>
+        <li>Meet George</li>
+        <li>Buy eggs</li>
+        <li>Read a book</li>
+        <li>Organize office</li>
+    </ul>
+    <div class="filter">
+        <div><span id="itemsNum"></span> Items Left<span></div>
+        <div class="filterItems"><span onclick="filter('All')">All</span><span onclick="filter('Active')">Active</span><span onclick="filter('Completed')">Completed</span></div>
+    </span>
+    </div>
+    <div id="myDIV" class="add">
+        <h2>Add Todo</h2>
+        <input type="text" id="myInput" placeholder="Todo..." required>
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+    <script src="todo.js"></script>
+  </body>
+</html>
